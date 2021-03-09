@@ -109,12 +109,11 @@ void Graph::BFSUtil(int s, bool visited[]) {
 		s = queue.front();
 		cout << s << " ";
 		queue.pop_front();
-	}
-	for (i = adj[s].begin(); i != adj[s].end(); i++) {
-		if (!visited[*i]) {
-			visited[*i] = true;
-			queue.push_back(*i);
+		for (i = adj[s].begin(); i != adj[s].end(); i++) {
+			if (!visited[*i]) {
+				visited[*i] = true;
+				queue.push_back(*i);
+			}
 		}
 	}
 }
-
